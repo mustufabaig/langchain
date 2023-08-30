@@ -29,3 +29,4 @@ agent_executor = create_sql_agent(
 )
 
 st.write("configuration done")
+agent_executor.run("Describe the playlisttrack table")
