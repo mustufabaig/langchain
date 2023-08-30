@@ -29,4 +29,4 @@ agent_executor = create_sql_agent(
 )
 
 st.write("configuration done")
-agent_executor.run("Describe the peer_benchmark table")
+st.write(agent_executor.run("show me the names of merchants with their decline rate in united states region"))
