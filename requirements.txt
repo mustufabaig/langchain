@@ -1,0 +1,8 @@
+snowflake-snowpark-python
+snowflake-snowpark-python[pandas]
+snowflake-sqlalchemy
+streamlit
+langchain
+openai
+langchain-experimental
+tiktoken
