@@ -1,4 +1,4 @@
-import streamlit as st
+rimport streamlit as st
 from langchain.agents import create_sql_agent
 from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 from langchain.sql_database import SQLDatabase
@@ -29,4 +29,4 @@ agent_executor = create_sql_agent(
 )
 
 st.write("configuration done")
-agent_executor.run("Describe the playlisttrack table")
+agent_executor.run("Describe the peer_benchmark table")
