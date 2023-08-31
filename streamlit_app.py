@@ -25,6 +25,7 @@ def prepare_agent():
     agent_executor = create_sql_agent(
         llm=OpenAI(temperature=0),
         toolkit=toolkit,
+        use_query_checker=True,
         verbose=True,
         agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
     )
@@ -32,8 +33,9 @@ def prepare_agent():
     st.session_state["agent_executor"] = agent_executor
     return agent_executor
 
-if 'agent_executor' not in st.session_state:
-    agent = prepare_agent()
+#if 'agent_executor' not in st.session_state:
+#    agent = prepare_agent()
+agent = prepare_agent()
 
 prompt = st.chat_input("How can I help you?")
 if prompt:
