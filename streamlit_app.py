@@ -31,7 +31,7 @@ def prepare_agent():
         return_intermediate_steps=True,
         agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
     )
-    st.info(dir(AgentType))
+    
     st.session_state["agent_executor"] = agent_executor
     return agent_executor
 
