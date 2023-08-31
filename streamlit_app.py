@@ -44,7 +44,7 @@ if prompt:
     with st.spinner('Looking for answers...'):
         #agent = st.session_state["agent_executor"]
         answer = agent.run(prompt)
+        st.info(answer["intermediate_steps"])
         with st.chat_message("assistant"):
             st.write("here is what I have found...")
-            st.info(answer["intermediate_steps])
             st.info(answer);
