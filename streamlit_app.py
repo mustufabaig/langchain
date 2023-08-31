@@ -27,6 +27,8 @@ def prepare_agent():
         toolkit=toolkit,
         use_query_checker=True,
         verbose=True,
+        top_k=3,
+        return_intermediate_steps=True,
         agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
     )
     st.info(dir(AgentType))
@@ -40,7 +42,7 @@ agent = prepare_agent()
 prompt = st.chat_input("How can I help you?")
 if prompt:
     with st.spinner('Looking for answers...'):
-        agent = st.session_state["agent_executor"]
+        #agent = st.session_state["agent_executor"]
         answer = agent.run(prompt)
         with st.chat_message("assistant"):
             st.write("here is what I have found...")
