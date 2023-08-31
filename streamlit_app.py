@@ -29,4 +29,4 @@ agent_executor = create_sql_agent(
 )
 
 st.write("configuration done")
-st.write(agent_executor.run("show me the names of merchants with their decline rate in united states region"))
+st.write(agent_executor.run("how do I compare against my peers in cross border fraud performance?"))
