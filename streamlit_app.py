@@ -31,13 +31,13 @@ def prepare_agent():
     st.session_state["agent_executor"] = agent_executor
     return agent_executor
 
-agent = st.session_state["agent_executor"]
-if not agent_executor:
+if 'agent_executor' not in st.session_state:
     agent = prepare_agent()
 
 prompt = st.chat_input("How can I help you?")
 if prompt:
     with st.spinner('Looking for answers...'):
         with st.chat_message("assistant"):
+            agent = st.session_state["agent_executor"]
             st.write("here is what I have found...")
-            st.info(agent_executor.run(prompt));
+            st.info(agent.run(prompt));
