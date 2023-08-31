@@ -46,4 +46,5 @@ if prompt:
         answer = agent.run(prompt)
         with st.chat_message("assistant"):
             st.write("here is what I have found...")
+            st.info(answer["intermediate_steps])
             st.info(answer);
