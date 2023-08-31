@@ -37,7 +37,8 @@ if 'agent_executor' not in st.session_state:
 prompt = st.chat_input("How can I help you?")
 if prompt:
     with st.spinner('Looking for answers...'):
+        agent = st.session_state["agent_executor"]
+        answer = agent.run(prompt)
         with st.chat_message("assistant"):
-            agent = st.session_state["agent_executor"]
             st.write("here is what I have found...")
-            st.info(agent.run(prompt));
+            st.info(answer);
