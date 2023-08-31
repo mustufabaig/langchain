@@ -40,4 +40,4 @@ if prompt:
     with st.spinner('Looking for answers...'):
         with st.chat_message("assistant"):
             st.write("here is what I have found...")
-            st.info(agent_executor.run("how do I compare against my peers in cross border fraud performance?");
+            st.info(agent_executor.run(prompt));
