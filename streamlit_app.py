@@ -28,10 +28,10 @@ def prepare_agent():
         verbose=True,
         agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
     )
-    session["agent_executor"] = agent_executor
+    st.session_state["agent_executor"] = agent_executor
     return agent_executor
 
-agent = session["agent_executor"]
+agent = st.session_state["agent_executor"]
 if not agent_executor:
     agent = prepare_agent()
 
